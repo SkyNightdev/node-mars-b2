@@ -1,0 +1,90 @@
+import { divide, add, multiply, subtract } from "./src/utils/math.js";
+import { getMaxTableau, supprimerVoyelles, trierNombres, nombreEnMots, obtenirValeursPropriete, trierdecroissant, transformerVoyellesEnMajuscule, compterVoyelles, transformerconsonneEnMajuscule } from "./src/utils/functions.js";
+
+// Ex 1
+console.log("___Ex1___");
+const a = 50;
+const b = 23;
+console.log(add(a, b)); // 73
+
+// Ex 2
+console.log("___Ex2___");
+// aide : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+
+const tableau = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(getMaxTableau(tableau));
+
+// Ex 3
+console.log("___Ex3___");
+// aide : Recherche sur plusieurs site
+const chaineOriginale = "Bonjour, comment ça va ?";
+const resultat = supprimerVoyelles(chaineOriginale);
+
+console.log("Chaîne originale :", chaineOriginale);
+console.log("Nouvelle chaîne sans voyelles :", resultat);
+
+// Ex 4
+// aide : Recherche sur plusieurs site
+console.log("___Ex4___");
+const chaineorigintableau = ["a", "z", "e", "b", "y", "t", "h", "g", "k"];
+console.log("tableau origine", chaineorigintableau);
+
+const resultatchainetableau = trierNombres(chaineorigintableau);
+console.log("Nouveau tableau", resultatchainetableau);
+
+// Ex 5
+// aide : Recherche sur plusieurs site
+console.log("___Ex5___");
+const nombre = 58;
+const resultatnbr = nombreEnMots(nombre);
+console.log(resultatnbr);
+
+// Ex 6
+// aide : Recherche sur plusieurs site
+console.log("___Ex6___");
+const tableauObjets = [
+    { id: 1, nom: "Leo", age: 25 },
+    { id: 2, nom: "Kevin", age: 30 },
+    { id: 3, nom: "jean", age: 22 },
+    { id: 3, nom: "Michel", age: 19 }
+];
+
+const nomPropriete = "nom";
+const resultpropriete = obtenirValeursPropriete(tableauObjets, nomPropriete);
+
+console.log(resultpropriete);
+
+// Ex 7
+// aide : Recherche sur plusieurs site
+console.log("___Ex7___");
+const tableauDeNombres = [5, 2, 8, 1, 9, 3];
+console.log("Tableau original :", tableauDeNombres);
+
+const resultcroissant = trierdecroissant(tableauDeNombres);
+console.log("Tableau trié par ordre décroissant :", resultcroissant);
+
+// Ex 8
+// aide : Recherche sur plusieurs site
+console.log("___Ex8___");
+const tableauDeMots = ["bonjour", "aujourd hui", "exemple", "anticonstitutionnellement"];
+console.log("Tableau original :", tableauDeMots);
+
+const result = transformerVoyellesEnMajuscule(tableauDeMots);
+console.log("Tableau avec voyelles en majuscule :", result);
+
+// Ex 9
+// aide : Recherche sur plusieurs site
+console.log("___Ex9___");
+const chaineTest = "Bonjour, comment s'est passé votre journée aujourd'hui";
+console.log("Chaîne de caractères :", chaineTest);
+
+const resultnbr = compterVoyelles(chaineTest);
+console.log("Nombre de voyelles :", resultnbr);
+
+// Ex 10
+console.log("___Ex10___");
+const tableauconsonne = ["bonjour", "aujourd hui", "exemple", "anticonstitutionnellement"];
+console.log("Tableau original :", tableauconsonne);
+
+const resultcons = transformerconsonneEnMajuscule(tableauconsonne);
+console.log("Tableau avec voyelles en majuscule :", resultcons);
